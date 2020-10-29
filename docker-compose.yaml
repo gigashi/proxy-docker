@@ -1,0 +1,9 @@
+version: '3'
+services:
+    nginx:
+        image: sameersbn/squid:3.5.27-2
+        ports:
+            - "3128:3128"
+        volumes:
+            - "./squid.conf:/etc/squid/squid.conf"
+            - "./passwords:/etc/squid/passwords"
